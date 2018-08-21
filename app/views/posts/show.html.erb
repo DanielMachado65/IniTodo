@@ -4,4 +4,6 @@
   </div>
   <p><%= @post.body %></p>
 </div>
-<%= link_to "Edit", edit_post_path(@post), :class => 'btn bt-default'%>
+<hr>
+<%= link_to "Edit", edit_post_path(@post), :class => 'btn btn-light' %>
+<%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Você tem certeza? "}, :class => 'btn btn-danger' %>

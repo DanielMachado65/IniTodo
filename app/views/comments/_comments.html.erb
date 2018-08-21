@@ -1,0 +1,8 @@
+<h3>Comentários </h3>
+<% @post.comments.each do |comment| %>
+  <div class="card card-body">
+    <p><strong><%= comment.username%></strong> : <%= comment. body %><%= link_to "[x]", [comment.post, comment], method: :delete, data: {confirm: 'Você tem certeza?'}, :class => 'text-secondary' %></p>
+
+  </div>
+
+<% end %>

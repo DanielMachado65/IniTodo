@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  http_basic_authenticate_with name: 'daniel', password:'1234', expect: [:index, :show]
+
   def index
     @posts = Post.all
   end

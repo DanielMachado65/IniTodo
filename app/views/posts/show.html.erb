@@ -1,0 +1,7 @@
+<div class="card card-body">
+  <div class="text-center">
+    <h2><%= @post.title %></h2>
+  </div>
+  <p><%= @post.body %></p>
+</div>
+<%= link_to "Edit", edit_post_path(@post), :class => 'btn bt-default'%>

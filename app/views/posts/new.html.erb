@@ -1,0 +1,23 @@
+<h1>Novo Post</h1>
+<div class="text-muted">
+  <p> Insira um nova coisa para ser feita </p>
+</div>
+<%= form_for :post, url: posts_path do |f| %>
+    <% if @post.errors.any? %>
+        <% @post.errors.full_messages.each do |msg| %>
+          <div class="alert alert-danger"><%= msg %></div>
+        <% end %>
+    <% end %>
+  <p>
+    <%= f.label :Titulo %><br>
+    <%= f.text_field(:title, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.label :Contéudo %><br>
+    <%= f.text_area(:body,{:class => 'form-control'}) %>
+  </p>
+  <div>
+    <%= f.submit({:class=>"btn btn-warning"})%>
+  </div>
+<% end %>
